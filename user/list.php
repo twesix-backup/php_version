@@ -13,20 +13,23 @@ require '../lib/db.php';
 
 switch ($type)
 {
-    case 'student' : $sql="select (`id`,`username`,`type`) from weeb.users where type='student'";break;
-    case 'teacher' : $sql="select (`id`,`username`,`type`) from weeb.users where type='student' and type='teacher'";break;
-    case 'admin' : $sql="select (`id`,`username`,`type`) from weeb.users";break;
+    case 'student' : $sql="select `id`,`username`,`type` from weeb.users where type='student'";break;
+    case 'teacher' : $sql="select `id`,`username`,`type` from weeb.users where type='student' or type='teacher'";break;
+    case 'admin' : $sql="select `id`,`username`,`type` from weeb.users";break;
     default : $sql=false;break;
 }
 if($sql)
 {
     $res=$conn->query($sql);
+//    var_dump($sql);
+//    var_dump($res);
 }
 ?>
+<hr>
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <table class="table">
+            <table class="table table-bordered">
                 <tr>
                     <th>用户ID</th>
                     <th>用户名</th>
@@ -57,11 +60,7 @@ if($sql)
                             ?>
 
             </table>
-
             <hr>
-            <h4>共<?php echo $num; ?>个用户</h4>
-            <hr>
-
             <a href="../index.php" class="btn btn-primary form-control">返回首页</a>
         </div>
     </div>

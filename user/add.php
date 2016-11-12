@@ -79,7 +79,7 @@ function add_user()
 
             <?php
 
-        if($logged_in)
+        if($logged_in&&$type=='admin')
         {
 
             ?>
@@ -116,7 +116,7 @@ function add_user()
             <?php
 
         }
-        else
+        if(!$logged_in)
         {
 
             ?>
