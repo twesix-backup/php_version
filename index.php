@@ -46,7 +46,12 @@ require "lib/login_check.php";
             <div class="col-sm-12 center">
                 <a class="btn btn-lg btn-default" href="user/list.php">查询用户</a>
                 <a class="btn btn-lg btn-default" href="user/add.php">添加用户</a>
+                <a class="btn btn-lg btn-default" href="user/update.php">修改用户</a>
+                <a class="btn btn-lg btn-default" href="user/delete.php">删除用户</a>
+                <br><br>
                 <a class="btn btn-lg btn-default" href="grade/query.php">查询成绩</a>
+                <a class="btn btn-lg btn-default" href="grade/add.php">添加成绩</a>
+                <br><br>
                 <a class="btn btn-lg btn-danger" href="logout.php">注销</a>
             </div>
         </div>

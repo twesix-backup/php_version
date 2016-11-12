@@ -11,7 +11,7 @@ if($conn->connect_error)
 }
 else
 {
-//    echo "<h3>数据库连接成功</h3>";
+    echo "<h3>数据库连接成功</h3>";
 }
 
 //test();

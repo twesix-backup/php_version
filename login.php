@@ -22,9 +22,11 @@ if(!empty($_GET['username'])&&!empty($_GET['password']))
         $username=$res["username"];
         $password=$res["password"];
         $type=$res["type"];
+        $id=$res["id"];
         setcookie('username',$username);
         setcookie('password',$password);
         setcookie('type',$type);
+        setcookie('id',$id);
         echo "<h3>你好，${username}</h3>";
     }
     else
