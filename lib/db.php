@@ -2,6 +2,7 @@
 $dbh="mysql.rdso.luocdb.com";
 $dbu="twesix";
 $dbp="Mm123456";
+$dbn='weeb';
 
 $conn=new mysqli($dbh,$dbu,$dbp);
 
@@ -25,4 +26,10 @@ function test()
     $res=$conn->query("select * from weeb.users");
 
     var_dump($res);
+}
+
+function ctime()
+{
+    $date=getdate();
+    return $date["year"].'/'.$date["mon"].'/'.$date["mday"].' '.$date["hours"].':'.$date["minutes"].':'.$date["seconds"];
 }
